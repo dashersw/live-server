@@ -89,7 +89,7 @@ function staticServer(root) {
 			}
 		}
 
-		send(req, reqpath, { root: root })
+		send(req, reqpath, { root: root, extensions: ['html', 'htm', 'js'] })
 			.on('error', error)
 			.on('directory', directory)
 			.on('file', file)
